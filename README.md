@@ -1,3 +1,3 @@
 Initializer
 ===========
-This is the starting point for my project.
+This is the starting point for my projects. Run ./start to get started...
