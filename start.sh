@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# TODO: check dependencies (GIT)
+# TODO: choose skeleton
+
 # Colors
 ESC_SEQ="\x1b["
 COL_RESET=$ESC_SEQ"39;49;00m"
@@ -23,16 +26,27 @@ clear
 
 # Enter your project title
 echo -e $HR
-echo -e "$COL_BLUE Creating a new project $COL_RESET"
-echo -e $HR
 echo -e " What is your project title? (without spaces)"
 echo -e $HR
 read PROJECT_TITLE
 clear
 
+# Choose project skeletor
+echo -e $HR
+echo -e " Choose your poject skeleton"
+echo -e " 1) Just style: Normalize, Bourbon, Neat, html5 boilerplate"
+echo -e " 2) With javascript: jQuery, Normalize, Bourbon, Neat, html5 boilerplate"
+echo -e " 3) With Laravel: Vagrant, Laravel, jQuery, Normalize, Bourbon, Neat, html5 boilerplate"
+echo -e $HR
+read PROJECT_SKELETON
+clear
+
+# TODO: git clone or submodule skeleton
+# TODO: mv some files probably
+
 # Project sucesfully created
-echo -e "$COL_YELLOW Creating: $PROJECT_TITLE in $PROJECT_LOCATION/$PROJECT_FOLDER $COL_RESET"
+echo -e " Creating: $COL_YELLOW $PROJECT_TITLE in $MY_PATH/$PROJECT_TITLE $COL_RESET with skeleton $COL_YELLOW $PROJECT_SKELETON $COL_RESET"
 sleep 1
 echo -e "$COL_GREEN Project succesfully created $COL_RESET"
-sleep 1
-clear
+
+
